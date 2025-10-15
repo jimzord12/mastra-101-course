@@ -1,0 +1,73 @@
+{
+  "compilerOptions": {
+    // Environment setup & latest features
+    "lib": ["ESNext", "DOM"],
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleDetection": "force",
+    "jsx": "react-jsx",
+    "allowJs": true,
+
+    // Module resolution
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+
+    // Path mappings for the Mastra framework structure
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"],
+      "@/mastra/*": ["src/mastra/*"],
+      "@/agents/*": ["src/mastra/agents/*"],
+      "@/tools/*": ["src/mastra/tools/*"],
+      "@/workflows/*": ["src/mastra/workflows/*"]
+    },
+
+    // Emit settings
+    "noEmit": true,
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+
+    // Type checking
+    "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "strictBindCallApply": true,
+    "strictPropertyInitialization": true,
+    "noImplicitThis": true,
+    "alwaysStrict": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+
+    // Additional checks
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedIndexedAccess": true,
+    "noImplicitOverride": true,
+    "noPropertyAccessFromIndexSignature": false,
+    "exactOptionalPropertyTypes": false,
+    "noImplicitReturns": true,
+
+    // Advanced options
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "verbatimModuleSyntax": false,
+    "allowImportingTsExtensions": false
+  },
+  "include": ["src/**/*", "src/**/*.ts", "src/**/*.tsx", "src/**/*.js", "src/**/*.jsx"],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "build",
+    ".next",
+    "coverage",
+    "**/*.test.ts",
+    "**/*.spec.ts",
+    "**/*.test.js",
+    "**/*.spec.js"
+  ]
+}
+

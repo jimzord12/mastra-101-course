@@ -1,0 +1,10 @@
+{
+  "servers": {
+    "mastra": {
+      "command": "cmd",
+      "args": ["/c", "bunx", "-y", "@mastra/mcp-docs-server"],
+      "type": "stdio"
+    }
+  }
+}
+

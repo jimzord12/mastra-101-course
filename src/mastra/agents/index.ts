@@ -1,5 +1,6 @@
-import { financialAgent } from "./financial-agent";
-import { mcpAgent } from "./mcp-demo-agent";
-import { weatherAgent } from "./weather-agent";
+import { financialAgent } from './financial-agent';
+import { gmailAgent } from './gmail-agent';
+import { mcpAgent } from './mcp-demo-agent';
+import { weatherAgent } from './weather-agent';
 
-export { financialAgent, mcpAgent, weatherAgent };
+export { financialAgent, gmailAgent, mcpAgent, weatherAgent };

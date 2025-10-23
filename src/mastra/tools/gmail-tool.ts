@@ -1,17 +1,32 @@
-import { composio, userId } from '../utils/composio';
+import { composio, userId } from "../utils/composio";
 
-// Ensure Gmail is connected and get the tools
-// const connectionId = await authenticateToolkit(userId, gmail_auth_config);
+console.log("[gmail-tool.ts]: Initializing Gmail tools from Composio...");
 
-console.log('[gmail-tool.ts]: Getting Gmail tools from Composio...');
+export const gmailToolsCollection = await composio.tools
+	.get(userId, {
+		toolkits: ["GMAIL"],
+	})
+	.then((tools) => {
+		console.log("[gmail-tool.ts]: ✅ Gmail tools loaded successfully");
+		console.log(
+			`[gmail-tool.ts]: Available Gmail tools: ${Object.keys(tools).length} tools`,
+		);
 
-// Get all Gmail tools as Mastra tools using userId (not connectionId)
-// The Composio SDK will find the connected account for this user automatically
+		if (Object.keys(tools).length > 0) {
+			console.log(
+				"[gmail-tool.ts]: Tools available:",
+				Object.keys(tools).join(", "),
+			);
+		}
 
-export const gmailToolsCollection = await composio.tools.get(userId, {
-  toolkits: ['GMAIL'],
-});
+		return tools;
+	})
+	.catch((error) => {
+		console.error("[gmail-tool.ts]: ❌ Error loading Gmail tools:", error);
+		console.error("[gmail-tool.ts]: Make sure:");
+		console.error("  1. COMPOSIO_API_KEY is set in .env");
+		console.error("  2. Gmail is connected in Composio dashboard");
+		console.error("  3. User authentication is configured correctly");
 
-console.log('[gmail-tool.ts]: Gmail tools loaded successfully');
-
-// Export the fetch emails tool
+		throw error;
+	});

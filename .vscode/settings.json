@@ -1,5 +1,5 @@
 {
-  "cSpell.words": ["composio", "libsql", "nodenext"],
+  "cSpell.words": ["bunx", "composio", "libsql", "nodenext"],
   "editor.defaultFormatter": "biomejs.biome",
   "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {

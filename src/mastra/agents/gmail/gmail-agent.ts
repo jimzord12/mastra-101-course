@@ -1,7 +1,7 @@
 import { Agent } from "@mastra/core/agent";
 import { LibSQLStore } from "@mastra/libsql";
 import { Memory } from "@mastra/memory";
-import { gmailToolsCollection } from "../tools/gmail-tool";
+import { gmailToolsCollection } from "../../tools/gmail-tool";
 
 export const gmailAgent = new Agent({
 	name: "Gmail Agent",

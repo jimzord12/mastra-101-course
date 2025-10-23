@@ -23,6 +23,7 @@
     "@mastra/loggers": "^0.10.16",
     "@mastra/mcp": "^0.13.5",
     "@mastra/memory": "^0.15.7",
+    "@smithery/sdk": "^1.6.8",
     "zod": "^3.22.4"
   },
   "devDependencies": {
@@ -34,4 +35,3 @@
   },
   "private": true
 }
-
